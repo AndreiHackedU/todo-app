@@ -1,37 +1,15 @@
-import React from 'react';
-import Todos from './components/Todos';
-import './App.css';
+import React, { useState } from "react";
+import Todos from "./components/Todos";
+import "./App.css";
 
 function App() {
-state = {
-  todos: [
-    {
-      id: 1,
-      title: 'Code a little',
-      completed: false
-    },
-    {
-      id: 2,
-      title: 'Code a little',
-      completed: false
-    },
-    {
-      id: 3,
-      title: 'Code a little',
-      completed: false
-    }
-  ]
-}
-
+  const [count, setCount] = useState(5);
   return (
     <div className="App">
       <header className="App-header">
-        
-        
-          <Todos />
-       
-       
-        
+        <h1>{count}</h1>
+        <button onClick={() => setCount(count + 1)}>count</button>
+        <button onClick={() => setCount(count - 1)}>discount</button>
       </header>
     </div>
   );

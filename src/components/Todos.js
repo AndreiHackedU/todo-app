@@ -1,17 +1,10 @@
-import React from 'react';
-
-
+import React from "react";
 
 function Todos() {
   return (
-    <div >
+    <div>
       <header className="App-header">
-        
-        
-          <h1>Todos</h1>
-       
-       
-        
+        <h1>Todos</h1>
       </header>
     </div>
   );
