@@ -15,3 +15,21 @@ body {
 a {
   color: #333333;
 }
+button {
+  margin: 0.02cm;
+  padding: 0cm;
+  width: 2cm;
+  height: 2cm;
+  border: 4px;
+}
+#equal {
+  width: 4cm;
+}
+#textinput {
+  width: 8.12cm;
+  height: 2cm;
+}
+.numbersRoot {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
