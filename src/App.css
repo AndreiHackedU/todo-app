@@ -23,11 +23,11 @@ button {
   border: 4px;
 }
 #equal {
-  width: 4cm;
+  width: 4.2cm;
   background-color: #278a38;
 }
 #textinput {
-  width: 8cm;
+  width: 8.2cm;
   height: 2cm;
   background-color: #95b3cf;
   border-width: 0px;
@@ -38,7 +38,8 @@ button {
 }
 .numbersRoot {
   display: grid;
-  grid-template-columns: 2cm 2cm 2cm 2cm;
+  grid-template-columns: 2.05cm 2.05cm 2.05cm 2.05cm;
+  grid-template-rows: 2.05cm 2.05cm 2.05cm;
 }
 
 .multiply {
@@ -59,5 +60,5 @@ button {
   background-color: #69a9f3;
   font-size: 1.3cm;
   font-family: "Quicksand", sans-serif;
-  border-radius: 2cm;
+  border-radius: 1cm;
 }
