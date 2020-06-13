@@ -27,9 +27,11 @@ export default () => {
       <header className="App-header">
         <div id="calculator">
           <div>
-            <h3>{`${firstNumber ? firstNumber : ""} ${
-              operator ? operator : ""
-            } ${secondNumber ? secondNumber : ""} = ${result}`}</h3>
+            <div id="textinput" type="text">{`${
+              firstNumber ? firstNumber : ""
+            } ${operator ? operator : ""} ${
+              secondNumber ? secondNumber : ""
+            } = ${result ? result : "0"}`}</div>
           </div>
           <div className="numbersRoot">
             {numbers.map((number) => (
