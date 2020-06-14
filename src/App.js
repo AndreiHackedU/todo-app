@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import "./App.css";
+import Button from "./Button";
 
 const sum = (a, b) => a + b;
 const difference = (a, b) => a - b;
@@ -15,16 +16,25 @@ const calculate = (a, b, operator) => {
   }
 };
 
-export default () => {
+const App = (props) => {
   const numbers = [7, 8, 9, "+", 4, 5, 6, "-", 1, 2, 3, "x"];
   const [firstNumber, setFirstNumber] = useState(null);
   const [operator, setOperator] = useState(null);
   const [secondNumber, setSecondNumber] = useState(null);
   const [result, setResult] = useState(null);
-
+  const assignNumber = (event) => {
+    if (!firstNumber) {
+      setFirstNumber(parseFloat(event.target.value));
+    } else if (!operator) {
+      setOperator(event.target.value);
+    } else {
+      setSecondNumber(parseFloat(event.target.value));
+    }
+  };
   return (
     <div className="App">
       <header className="App-header">
+        {props.name}
         <div id="calculator">
           <div>
             <div id="textinput" type="text">{`${
@@ -35,22 +45,7 @@ export default () => {
           </div>
           <div className="numbersRoot">
             {numbers.map((number) => (
-              <button
-                value={number}
-                key={number}
-                className="btn btn-info"
-                onClick={(event) => {
-                  if (!firstNumber) {
-                    setFirstNumber(parseFloat(event.target.value));
-                  } else if (!operator) {
-                    setOperator(event.target.value);
-                  } else {
-                    setSecondNumber(parseFloat(event.target.value));
-                  }
-                }}
-              >
-                {number}
-              </button>
+              <Button number={number} assignNumber={assignNumber} />
             ))}
           </div>
           <div className="multiply">
@@ -79,3 +74,4 @@ export default () => {
     </div>
   );
 };
+export default App;
